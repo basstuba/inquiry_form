@@ -17,13 +17,13 @@ class ContactFactory extends Factory
     {
         return [
             'category_id' => $this->faker->numberBetween(1,5),
-            'first_name' => $this->faker->name(),
-            'last_name' => $this->faker->name(),
+            'first_name' => $this->faker->firstName(),
+            'last_name' => $this->faker->lastName(),
             'gender' => $this->faker->numberBetween(1,3),
             'email' => $this->faker->safeEmail(),
-            'tel' => $this->faker->randomNumber(),
-            'address' => $this->faker->city(),
-            'datail' => $this->faker->text(20)
+            'tell' => $this->faker->phoneNumber(),
+            'address' => $this->faker->address(),
+            'datail' => $this->faker->realText(20)
         ];
     }
 }

@@ -11,4 +11,8 @@ class Category extends Model
 
     protected $guarded=['id'];
     protected $fillable=['content'];
+
+    public function contacts() {
+        return $this->hasMany('App\Models\Contact');
+    }
 }
