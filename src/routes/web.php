@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Inquiry_form;
+use App\Http\Controllers\Inquiry_formController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +14,4 @@ use App\Http\Controllers\Inquiry_form;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [Inquiry_formController::class, 'index']);

@@ -1,0 +1,79 @@
+.header__item {
+    border: 1px solid #dbcaca;
+    background-color: #e8e7e7;
+}
+
+.header__item-register {
+    color: #c3baba;
+    text-decoration: none;
+}
+
+.main {
+    width: 100%;
+    background-color: #f0e6df;
+    color: #817070;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 1.6%;
+}
+
+.main__title-logo {
+    font-size: xx-large;
+    padding: 20px;
+    margin: 0;
+}
+
+.main__content {
+    background-color: #fff;
+    border: 1px solid #dbcaca;
+    border-radius: 5px;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.form {
+    margin: 4.5em 2em;
+}
+
+.form__item {
+    list-style: none;
+    padding-left: 0;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.form__item-title {
+    text-align: left;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.form__item-input {
+    width: 100%;
+}
+
+input {
+    border: none;
+    background-color: #e8e7e7;
+    width: 100%;
+    height: 3em;
+}
+
+.form__item-error {
+    color: red;
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.form__button {
+    width: 100%;
+    margin-top: 3em;
+}
+
+.form__button-submit {
+    border: 1px solid #dbcaca;
+    background-color: #6b6060;
+    color: #fff;
+    padding: 10px 30px;
+}

@@ -16,49 +16,58 @@
                 <tr>
                     <th>お名前</th>
                     <td>
-                        {{--保留中<input type="text" name="name" value="{{$contact['name']}}" readonly/>--}}
+                        <input type="text" name="last_name" value="{{$contact['last_name']}}" readonly/>
+                        <input type="text" name="first_name" value="{{$contact['first_name']}}" readonly/>
                     </td>
                 </tr>
                 <tr>
                     <th>性別</th>
                     <td>
-                        {{--保留中<input type="text" name="gender" value="{{$contact['gender']}}" readonly/>--}}
+                        <input type="hidden" name="gender" value="{{$contact['gender']}}" readonly/>
+                        @if($contact['gender'] == '1')
+                            {{'男性'}}
+                        @elseif($contact['gender'] == '2')
+                            {{'女性'}}
+                        @else($contact['gender'] == '3')
+                            {{'その他'}}
+                        @endif
                     </td>
                 </tr>
                 <tr>
                     <th>メールアドレス</th>
                     <td>
-                        {{--保留中<input type="email" name="email" value="{{$contact['email']}}" readonly/>--}}
+                        <input type="email" name="email" value="{{$contact['email']}}" readonly/>
                     </td>
                 </tr>
                 <tr>
                     <th>電話番号</th>
                     <td>
-                        {{--保留中<input type="tel" name="tell" value="{{$contact['tell']}}" readonly/>--}}
+                        <input type="tel" name="tell" value="{{$contact['tell']}}" readonly/>
                     </td>
                 </tr>
                 <tr>
                     <th>住所</th>
                     <td>
-                        {{--保留中<input type="text" name="address" value="{{$contact['address']}}" readonly/>--}}
+                        <input type="text" name="address" value="{{$contact['address']}}" readonly/>
                     </td>
                 </tr>
                 <tr>
                     <th>建物名</th>
                     <td>
-                        {{--保留中<input type="text" name="building" value="{{$contact['building']}}" readonly/>--}}
+                        <input type="text" name="building" value="{{$contact['building']}}" readonly/>
                     </td>
                 </tr>
                 <tr>
                     <th>お問い合わせの種類</th>
                     <td>
-                        {{--保留中<input type="text" name="category_id" value="{{$contact['category_id']}}" readonly/>--}}
+                        <input type="hidden" name="category_id" value="{{$category['id']}}" readonly/>
+                        {{category['content']}}
                     </td>
                 </tr>
                 <tr>
                     <th>お問い合わせ内容</th>
                     <td>
-                        {{--保留中<input type="text" name="datail" value="{{$contact['datail']}}" readonly/>--}}
+                        <input type="text" name="datail" value="{{$contact['datail']}}" readonly/>
                     </td>
                 </tr>
             </table>
@@ -73,3 +82,4 @@
         </form>
     </div>
 </div>
+@endsection

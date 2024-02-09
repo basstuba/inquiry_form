@@ -1,0 +1,27 @@
+body {
+    font-family: 'Merriweather', serif;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.header__title {
+    width: 80%;
+    text-align: center;
+    margin-left: 5%;
+}
+
+.header__title-logo {
+    color: #817070;
+    font-size: 2.5em;
+    font-weight: bolder;
+}
+
+.header__link {
+    width: 5%;
+    text-align: center;
+}

@@ -24,9 +24,12 @@
                     <li class="form__item-input">
                         <input type="email" name="email" placeholder="例:test@example.com" value="{{old('email')}}"/>
                     </li>
+                    <li class="form__item-error">
                     @error('email')
-                    <li class="form__item-error">{{$message}}</li>
+                        {{$message}}
                     @enderror
+                    　
+                    </li>
                 </ul>
             </div>
             <div class="form__content">
@@ -35,9 +38,12 @@
                     <li class="form__item-input">
                         <input type="password" name="password" placeholder="例:coachtech1106"/>
                     </li>
+                    <li class="form__item-error">
                     @error('password')
-                    <li class="form__item-error">{{$message}}</li>
+                        {{$message}}
                     @enderror
+                    　
+                    </li>
                 </ul>
             </div>
             <div class="form__button">
@@ -46,3 +52,4 @@
         </form>
     </div>
 </div>
+@endsection

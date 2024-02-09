@@ -8,7 +8,10 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Contact;
 
-class Inquiry_form extends Controller
+class Inquiry_formController extends Controller
 {
-    //
+    public function index()
+    {
+        return view('auth.login');
+    }
 }
