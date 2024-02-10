@@ -17,18 +17,18 @@
                     <th>お名前</th>
                     <td>
                         <input type="text" name="last_name" value="{{$contact['last_name']}}" readonly/>
-                        <input type="text" name="first_name" value="{{$contact['first_name']}}" readonly/>
+                        <input type="text" name="first_name" value="{{$contact ?? ''['first_name']}}" readonly/>
                     </td>
                 </tr>
                 <tr>
                     <th>性別</th>
                     <td>
                         <input type="hidden" name="gender" value="{{$contact['gender']}}" readonly/>
-                        @if($contact['gender'] == '1')
+                        @if($contact ?? ''['gender'] == '1')
                             {{'男性'}}
-                        @elseif($contact['gender'] == '2')
+                        @elseif($contact ?? ''['gender'] == '2')
                             {{'女性'}}
-                        @else($contact['gender'] == '3')
+                        @else($contact ?? ''['gender'] == '3')
                             {{'その他'}}
                         @endif
                     </td>
@@ -43,6 +43,7 @@
                     <th>電話番号</th>
                     <td>
                         <input type="tel" name="tell" value="{{$contact['tell']}}" readonly/>
+
                     </td>
                 </tr>
                 <tr>

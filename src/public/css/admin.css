@@ -1,0 +1,114 @@
+.header__item-form--button {
+    border: 1px solid #dbcaca;
+    background-color: #e8e7e7;
+    color: #c3baba;
+    padding: 3px 15px;
+}
+
+.main {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    color: #817070;
+    border-top: 1px solid #dbcaca;
+}
+
+.main__title-logo {
+    font-size: xx-large;
+    padding-bottom: 0.5em;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+}
+
+.search-form__input-text {
+    border: 1px solid #dbcaca;
+    background-color: #e8e7e7;
+    color: #c3baba;
+    width: 22em;
+    height: 3em;
+    padding: 0 0.5em;
+    margin-right: 2em;
+}
+
+.search-form__select-gender {
+    border: 1px solid #dbcaca;
+    background-color: #e8e7e7;
+    color: #817070;
+    width: 6em;
+    height: 3em;
+    text-align: center;
+    margin-right: 2em;
+}
+
+.search-form__select-kinds {
+    border: 1px solid #dbcaca;
+    background-color: #e8e7e7;
+    color: #817070;
+    width: 13em;
+    height: 3em;
+    text-align: center;
+    margin-right: 2em;
+}
+
+.search-form__select-date {
+    border: 1px solid #dbcaca;
+    background-color: #e8e7e7;
+    color: #817070;
+    width: 9em;
+    height: 3em;
+    text-align: center;
+    margin-right: 2em;
+}
+
+.search-form__button-submit {
+    border: 1px solid #dbcaca;
+    background-color: #6b6060;
+    color: #fff;
+    padding: 5px 30px;
+    height: 3em;
+    margin-right: 2em;
+}
+
+.search-form__button-reset {
+    border: 1px solid #dbcaca;
+    background-color: #f0e6df;
+    color: #fff;
+    padding: 5px 17px;
+    height: 3em;
+    margin-right: 2em;
+}
+
+.main__action {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.search-table {
+    width: 65.5%;
+    margin: 0 auto;
+}
+
+tr {
+    border: 1px solid #dbcaca;
+}
+
+th {
+    border: none;
+    background-color: #6b6060;
+    color: #fff;
+    width: 12em;
+    height: 3em;
+}
+
+td {
+    width: 12em;
+    height: 2em;
+}
+

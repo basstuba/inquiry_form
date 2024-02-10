@@ -9,8 +9,9 @@
 </head>
 <body>
     <div class="modal-main">
-        <div class="modal-main__close">
-            <p>&times;（仮）</p><!--保留中-->
+        <div class="modal-main__content">
+            <div class="modal-main__close">
+            <button class="modal-main__close-button">&times;</button><!--保留中-->
         </div>
         <div class="modal-main__table">
             <table>
@@ -82,6 +83,7 @@
                     </div>
                 </form>
             </div>
+        </div>
         </div>
     </div>
 </body>

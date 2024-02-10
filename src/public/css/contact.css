@@ -1,0 +1,108 @@
+.main {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    color: #817070;
+    border-top: 1px solid #dbcaca;
+}
+
+.main__title-logo {
+    font-size: xx-large;
+    padding-bottom: 0.5em;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+}
+
+.main__content {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form__group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__group-title {
+    font-size: larger;
+}
+
+.form__group-title--mark {
+    color: #fe6c6c;
+}
+
+.form__group-input-name {
+    width: 17em;
+    height: 2em;
+    margin-left: 2em;
+    border: none;
+    background-color: #e8e7e7;
+    padding: 0 2em;
+}
+
+.form__group-input-gender {
+    margin-right: 12em;
+}
+
+label {
+    margin: 0 1.7em;
+    font-weight: bold;
+}
+
+.form__group-input-email,
+.form__group-input-address,
+.form__group-input-building {
+    width: 36em;
+    height: 2em;
+    border: none;
+    background-color: #e8e7e7;
+    padding: 0 2em;
+}
+
+.form__group-input-tel {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form__group-input-tell {
+    width: 10em;
+    height: 2em;
+    border: none;
+    background-color: #e8e7e7;
+    text-align: center;
+}
+
+p {
+    margin: 0.5em 0.7em;
+}
+
+.form__group-building {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+}
+
+.form__group-input-kinds {
+    width: 17em;
+    height: 2em;
+    border: none;
+    background-color: #e8e7e7;
+    padding: 0 2em;
+    color: #817070;
+    margin-right: 19em;
+}
+
+.form__group-input-text {
+    border: none;
+    background-color: #e8e7e7;
+    padding: 0.5em 2em 0;
+    margin-right: 6em;
+}
+
+.form__button-submit {
+    border: 1px solid #dbcaca;
+    background-color: #6b6060;
+    color: #fff;
+    padding: 5px 30px;
+}

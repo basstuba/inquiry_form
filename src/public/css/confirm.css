@@ -1,0 +1,57 @@
+.main {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    color: #817070;
+    border-top: 1px solid #dbcaca;
+}
+
+.main__title-logo {
+    font-size: xx-large;
+    padding: 20px;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+}
+
+.main__content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+table {
+    margin: 0 auto;
+    width: 70%;
+}
+
+th {
+    background-color: #ab9b94;
+    color: #fff;
+    border: 1px solid #dbcaca;
+    width: 30%;
+    padding: 0.7em 1.5em;
+    text-align: left;
+}
+
+td {
+    border: 1px solid #dbcaca;
+    width: 70%;
+}
+
+.form__action {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 1.5em;
+}
+
+.form__action-button--submit {
+    border: 1px solid #dbcaca;
+    background-color: #6b6060;
+    color: #fff;
+    padding: 5px 30px;
+    margin: 1em 4em;
+}
+
+.form__action-correction--link {
+    color: #817070
+}

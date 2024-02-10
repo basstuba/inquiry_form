@@ -22,10 +22,10 @@
         <form class="search-form" action="/search" method="get">
             @csrf
             <div class="search-form__input">
-                <input type="text" name="keyword" placeholder="名前やメールアドレスを入力してください" value="{{old('keyword')}}">
+                <input class="search-form__input-text" type="text" name="keyword" placeholder="名前やメールアドレスを入力してください" value="{{old('keyword')}}">
             </div>
             <div class="search-form__select">
-                <select name="gender">
+                <select class="search-form__select-gender" name="gender">
                     <option value="">性別</option>
                     @foreach($contacts as $contact)
                     <option value="{{$contact['gender']}}">
@@ -41,7 +41,7 @@
                 </select>
             </div>
             <div class="search-form__select">
-                <select name="category_id">
+                <select class="search-form__select-kinds" name="category_id">
                     <option value="">お問い合わせの種類</option>
                     @foreach($categories as $category)
                     <option value="{{ $category['id'] }}">{{ $category['content'] }}</option>
@@ -49,7 +49,7 @@
                 </select>
             </div>
             <div class="search-form__select">
-                <input type="date" name="date" value="{{old('date')}}">
+                <input class="search-form__select-date" type="date" name="date" value="{{old('date')}}">
             </div>
             <div class="search-form__button">
                 <button class="search-form__button-submit" type="submit">検索</button>
@@ -74,6 +74,7 @@
                 <th>性別</th>
                 <th>メールアドレス</th>
                 <th>お問い合わせの種類</th>
+                <th></th>
             </tr>
             @foreach($contacts as $contact)
             <tr>
@@ -87,6 +88,7 @@
                         {{'女性'}}
                     @else($contact['gender'] == '3')
                         {{'その他'}}
+                    @endif
                 </td>
                 <td>
                     {{$contact['email']}}
