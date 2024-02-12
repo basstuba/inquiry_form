@@ -19,7 +19,7 @@
         <h2 class="main__title-logo">Admin</h2>
     </div>
     <div class="search">
-        <form class="search-form" action="/search" method="get">
+        <form class="search-form" action="/admin/search" method="get">
             @csrf
             <div class="search-form__input">
                 <input class="search-form__input-text" type="text" name="keyword" placeholder="名前やメールアドレスを入力してください" value="{{old('keyword')}}">
@@ -27,17 +27,9 @@
             <div class="search-form__select">
                 <select class="search-form__select-gender" name="gender">
                     <option value="">性別</option>
-                    @foreach($contacts as $contact)
-                    <option value="{{$contact['gender']}}">
-                        @if($contact['gender'] == '1')
-                            {{'男性'}}
-                        @elseif($contact['gender'] == '2')
-                            {{'女性'}}
-                        @else($contact['gender'] == '3')
-                            {{'その他'}}
-                        @endif
-                    </option>
-                    @endforeach
+                    <option value="1">男性</option>
+                    <option value="2">女性</option>
+                    <option value="3">その他</option>
                 </select>
             </div>
             <div class="search-form__select">
@@ -49,7 +41,7 @@
                 </select>
             </div>
             <div class="search-form__select">
-                <input class="search-form__select-date" type="date" name="date" value="{{old('date')}}">
+                <input class="search-form__select-date" type="date" name="updated_at" value="{{old('updated_at')}}">
             </div>
             <div class="search-form__button">
                 <button class="search-form__button-submit" type="submit">検索</button>
@@ -63,7 +55,7 @@
         <div class="export">
             <p>エクスポート（仮）</p><!--保留中-->
         </div>
-        <div class="pagination">
+        <div class="main__action-pagination">
             {{$contacts->links()}}
         </div>
     </div>
@@ -79,7 +71,7 @@
             @foreach($contacts as $contact)
             <tr>
                 <td>
-                    {{$contact['last_name']}}{{$contact['first_name']}}
+                    {{$contact['last_name']}}&emsp;{{$contact['first_name']}}
                 </td>
                 <td>
                     @if($contact['gender'] == '1')

@@ -26,7 +26,7 @@
                 @error('last_name','first_name')
                     {{$message}}
                 @enderror
-                　
+                &emsp;
             </div>
             <div class="form__group">
                 <div class="form__group-title">
@@ -43,7 +43,7 @@
                 @error('gender')
                     {{$message}}
                 @enderror
-                　
+                &emsp;
             </div>
             <div class="form__group">
                 <div class="form__group-title">
@@ -58,7 +58,7 @@
                 @error('email')
                     {{$message}}
                 @enderror
-                　
+                &emsp;
             </div>
             <div class="form__group">
                 <div class="form__group-title">
@@ -77,7 +77,7 @@
                 @error('tell')
                     {{$message}}
                 @enderror
-                　
+                &emsp;
             </div>
             <div class="form__group">
                 <div class="form__group-title">
@@ -92,7 +92,7 @@
                 @error('address')
                     {{$message}}
                 @enderror
-                　
+                &emsp;
             </div>
             <div class="form__group-building">
                 <div class="form__group-title">
@@ -120,7 +120,7 @@
                 @error('category_id')
                     {{$message}}
                 @enderror
-                　
+                &emsp;
             </div>
             <div class="form__group">
                 <div class="form__group-title">
@@ -135,7 +135,7 @@
                 @error('datail')
                     {{$message}}
                 @enderror
-                　
+                &emsp;
             </div>
             <div class="form__button">
                 <button class="form__button-submit">確認画面</button>

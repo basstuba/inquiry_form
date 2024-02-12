@@ -22,13 +22,13 @@
                 <ul class="form__item">
                     <li class="form__item-title">お名前</li>
                     <li class="form__item-input">
-                        <input type="text" name="name" placeholder="例:山田　太郎" value="{{old('name')}}"/>
+                        <input type="text" name="name" placeholder="例:山田&emsp;太郎" value="{{old('name')}}"/>
                     </li>
                     <li class="form__item-error">
                     @error('name')
                         {{$message}}
                     @enderror
-                    　
+                    &emsp;
                     </li>
                 </ul>
             </div>
@@ -42,7 +42,7 @@
                     @error('email')
                         {{$message}}
                     @enderror
-                    　
+                    &emsp;
                     </li>
                 </ul>
             </div>
@@ -56,7 +56,7 @@
                     @error('password')
                         {{$message}}
                     @enderror
-                    　
+                    &emsp;
                     </li>
                 </ul>
             </div>

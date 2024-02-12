@@ -28,7 +28,7 @@
                     @error('email')
                         {{$message}}
                     @enderror
-                    　
+                    &emsp;
                     </li>
                 </ul>
             </div>
@@ -42,7 +42,7 @@
                     @error('password')
                         {{$message}}
                     @enderror
-                    　
+                    &emsp;
                     </li>
                 </ul>
             </div>

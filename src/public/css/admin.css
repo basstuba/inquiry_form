@@ -86,7 +86,7 @@
 .main__action {
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 65%;
     margin: 0 auto;
 }
 
@@ -110,5 +110,34 @@ th {
 td {
     width: 12em;
     height: 2em;
+}
+
+.main__action-pagination {
+    width: 15%;
+    margin-right: 1em;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    border: 1px solid #dbcaca;
+}
+
+.pagination li {
+    display: inline-block;
+    color: #817070;
+    border-right: 1px solid #dbcaca;
+    padding: 0 5px;
+    margin: 0;
+}
+
+.pagination li:last-child {
+    border-right: none;
+}
+
+.page-link {
+    text-decoration: none;
 }
 

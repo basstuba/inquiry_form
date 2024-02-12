@@ -1,0 +1,49 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Http\Requests\UserRequest;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use App\Models\Category;
+use App\Models\Contact;
+use App\Models\User;
+
+class UserController extends Controller
+{
+    public function register()
+    {
+        return view('auth.register');
+    }
+
+    public function store(UserRequest $request)
+    {
+        $hashedPassword = Hash::make($request->input('password'));
+        $user = new User;
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        $user->password = $hashedPassword;
+        $user->save();
+        return view('auth.login');
+    }
+
+    public function login()
+    {
+        return view('auth.login');
+    }
+
+    public function admin()
+    {
+        $contacts = Contact::paginate(7);
+        $categories = Category::all();
+        return view('admin', compact('contacts', 'categories'));
+    }
+
+    public function search(Request $request)
+    {
+        $contacts = Contact::with('category')->KeywordSearch($request->keyword)->GenderSearch($request->gender)->CategorySearch($request->category_id)->DateSearch($request->update_at)->paginate(7);
+        $categories = Category::all();
+        return view('admin', compact('contacts', 'categories'));
+    }
+}
