@@ -29,3 +29,9 @@ docker-compose up -d --build
 ・nginx 1.21.1
 ・Livewire
 ## ER図
+![ER図](./inquiry_form.drawio.png)
+## URL
+・開発環境: http://localhost/
+・phpMyAdmin: http://localhost:8080/
+
+
