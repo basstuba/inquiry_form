@@ -23,7 +23,10 @@
                 </div>
             </div>
             <div class="form__group-error">
-                @error('last_name','first_name')
+            @error('last_name')
+                    {{$message}}
+                @enderror
+                @error('first_name')
                     {{$message}}
                 @enderror
                 &emsp;
@@ -34,9 +37,9 @@
                     <span class="form__group-title--mark">※</span>
                 </div>
                 <div class="form__group-input-gender">
-                    <label><input type="radio" name="gender" value="1"/>男性</label>
-                    <label><input type="radio" name="gender" value="2"/>女性</label>
-                    <label><input type="radio" name="gender" value="3"/>その他</label>
+                    <label><input class="input-gender" type="radio" name="gender" value="1"checked/>男性</label>
+                    <label><input class="input-gender" type="radio" name="gender" value="2"/>女性</label>
+                    <label><input class="input-gender" type="radio" name="gender" value="3"/>その他</label>
                 </div>
             </div>
             <div class="form__group-error">
@@ -74,9 +77,19 @@
                 </div>
             </div>
             <div class="form__group-error">
-                @error('tell')
-                    {{$message}}
-                @enderror
+                @php
+                    $errorMessages = [
+                        $errors->first('tell_1'),
+                        $errors->first('tell_2'),
+                        $errors->first('tell_3')
+                    ];
+                    $errorMessages = array_filter($errorMessages);
+                    $uniqueErrorMessages = array_unique($errorMessages);
+                    $errorMessage = implode(' ', $uniqueErrorMessages);
+                @endphp
+                @if ($errorMessage)
+                    {{$errorMessage}}
+                @endif
                 &emsp;
             </div>
             <div class="form__group">

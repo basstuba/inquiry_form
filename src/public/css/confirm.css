@@ -37,6 +37,28 @@ td {
     width: 70%;
 }
 
+input {
+    border: none;
+    color: #ab9b94;
+}
+
+.input-last_name {
+    text-align: right;
+    padding-right: 1em;
+}
+
+.input-email,
+.input-address,
+.input-building,
+.input-datail {
+    width: 24em;
+    text-align: center;
+}
+
+.input-tel {
+    text-align: center;
+}
+
 .form__action {
     display: flex;
     justify-content: center;

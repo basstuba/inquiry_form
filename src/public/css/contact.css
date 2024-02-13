@@ -49,6 +49,10 @@ label {
     font-weight: bold;
 }
 
+.input-gender {
+    accent-color: #817070;
+}
+
 .form__group-input-email,
 .form__group-input-address,
 .form__group-input-building {
@@ -105,4 +109,9 @@ p {
     background-color: #6b6060;
     color: #fff;
     padding: 5px 30px;
+}
+
+.form__group-error {
+    color: #fe6c6c;
+    text-align: left;
 }

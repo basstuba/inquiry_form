@@ -53,7 +53,7 @@
     </div>
     <div class="main__action">
         <div class="export">
-            <p>エクスポート（仮）</p><!--保留中-->
+            <a class="export-button" href="">エクスポート</a>
         </div>
         <div class="main__action-pagination">
             {{$contacts->links()}}

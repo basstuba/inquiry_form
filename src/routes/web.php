@@ -20,4 +20,7 @@ Route::post('/register', [UserController::class, 'store']);
 Route::get('/login', [UserController::class, 'login']);
 Route::get('/admin', [UserController::class, 'admin']);
 Route::get('/admin/search', [UserController::class, 'search']);
+
 Route::get('/', [Inquiry_formController::class, 'index']);
+Route::post('/confirm', [Inquiry_formController::class, 'confirm']);
+Route::post('/thanks', [Inquiry_formController::class, 'store']);

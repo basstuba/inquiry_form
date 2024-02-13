@@ -16,19 +16,19 @@
                 <tr>
                     <th>お名前</th>
                     <td>
-                        <input type="text" name="last_name" value="{{$contact['last_name']}}" readonly/>
-                        <input type="text" name="first_name" value="{{$contact ?? ''['first_name']}}" readonly/>
+                        <input class="input-last_name" type="text" name="last_name" value="{{$contact['last_name']}}" readonly/>
+                        <input class="input-first_name" type="text" name="first_name" value="{{$contact['first_name']}}" readonly/>
                     </td>
                 </tr>
                 <tr>
                     <th>性別</th>
                     <td>
-                        <input type="hidden" name="gender" value="{{$contact['gender']}}" readonly/>
-                        @if($contact ?? ''['gender'] == '1')
+                        <input class="input-gender" type="hidden" name="gender" value="{{$contact['gender']}}" readonly/>
+                        @if($contact['gender'] == '1')
                             {{'男性'}}
-                        @elseif($contact ?? ''['gender'] == '2')
+                        @elseif($contact['gender'] == '2')
                             {{'女性'}}
-                        @else($contact ?? ''['gender'] == '3')
+                        @else($contact['gender'] == '3')
                             {{'その他'}}
                         @endif
                     </td>
@@ -36,39 +36,39 @@
                 <tr>
                     <th>メールアドレス</th>
                     <td>
-                        <input type="email" name="email" value="{{$contact['email']}}" readonly/>
+                        <input class="input-email" type="email" name="email" value="{{$contact['email']}}" readonly/>
                     </td>
                 </tr>
                 <tr>
                     <th>電話番号</th>
                     <td>
-                        <input type="tel" name="tell" value="{{$contact['tell']}}" readonly/>
+                        <input class="input-tel" type="tel" name="tell" value="{{$contact['tell']}}" readonly/>
 
                     </td>
                 </tr>
                 <tr>
                     <th>住所</th>
                     <td>
-                        <input type="text" name="address" value="{{$contact['address']}}" readonly/>
+                        <input class="input-address" type="text" name="address" value="{{$contact['address']}}" readonly/>
                     </td>
                 </tr>
                 <tr>
                     <th>建物名</th>
                     <td>
-                        <input type="text" name="building" value="{{$contact['building']}}" readonly/>
+                        <input class="input-building" type="text" name="building" value="{{$contact['building']}}" readonly/>
                     </td>
                 </tr>
                 <tr>
                     <th>お問い合わせの種類</th>
                     <td>
-                        <input type="hidden" name="category_id" value="{{$category['id']}}" readonly/>
-                        {{category['content']}}
+                        <input class="input-category" type="hidden" name="category_id" value="{{$contact['category_id']}}" readonly/>
+                        {{$category['content']}}
                     </td>
                 </tr>
                 <tr>
                     <th>お問い合わせ内容</th>
                     <td>
-                        <input type="text" name="datail" value="{{$contact['datail']}}" readonly/>
+                        <input class="input-datail" type="text" name="datail" value="{{$contact['datail']}}" readonly/>
                     </td>
                 </tr>
             </table>

@@ -29,10 +29,11 @@ class ContactRequest extends FormRequest
             'last_name' => 'required',
             'gender' => 'required',
             'email' => 'required|email',
-            'tell_1' => 'required|integer|max:5',
-            'tell_2' => 'required|integer|max:5',
-            'tell_3' => 'required|integer|max:5',
+            'tell_1' => 'required|numeric|digits_between:1,5',
+            'tell_2' => 'required|numeric|digits_between:1,5',
+            'tell_3' => 'required|numeric|digits_between:1,5',
             'address' => 'required',
+            'building' => 'nullable',
             'datail' => 'required|max:120'
         ];
     }
