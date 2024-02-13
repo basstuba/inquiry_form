@@ -40,6 +40,7 @@ td {
 input {
     border: none;
     color: #ab9b94;
+    font-size: large;
 }
 
 .input-last_name {

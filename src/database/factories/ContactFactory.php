@@ -21,7 +21,7 @@ class ContactFactory extends Factory
             'last_name' => $this->faker->lastName(),
             'gender' => $this->faker->numberBetween(1,3),
             'email' => $this->faker->safeEmail(),
-            'tell' => $this->faker->phoneNumber(),
+            'tell' => $this->faker->numberBetween(10000000000,99999999999),
             'address' => $this->faker->address(),
             'datail' => $this->faker->realText(20)
         ];

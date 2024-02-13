@@ -60,20 +60,20 @@
         </div>
     </div>
     <div class="search-table">
-        <table>
-            <tr>
-                <th>お名前</th>
-                <th>性別</th>
-                <th>メールアドレス</th>
-                <th>お問い合わせの種類</th>
-                <th></th>
+        <table search-table__main>
+            <tr class="search-table__content">
+                <th class="search-table__title">お名前</th>
+                <th class="search-table__title">性別</th>
+                <th class="search-table__title">メールアドレス</th>
+                <th class="search-table__title">お問い合わせの種類</th>
+                <th class="search-table__title"></th>
             </tr>
             @foreach($contacts as $contact)
-            <tr>
-                <td>
+            <tr class="search-table__content">
+                <td class="search-table__item">
                     {{$contact['last_name']}}&emsp;{{$contact['first_name']}}
                 </td>
-                <td>
+                <td class="search-table__item">
                     @if($contact['gender'] == '1')
                         {{'男性'}}
                     @elseif($contact['gender'] == '2')
@@ -82,15 +82,15 @@
                         {{'その他'}}
                     @endif
                 </td>
-                <td>
+                <td class="search-table__item">
                     {{$contact['email']}}
                 </td>
-                <td>
+                <td class="search-table__item">
                     {{$contact['category']['content']}}
                 </td>
-                <td>
+                <td class="search-table__item">
                     <div class="modal">
-                        <p>詳細（仮）</p><!--モーダルウィンドウ完成まで保留中-->
+                        @livewire('modal', ['contact' => $contact])
                     </div>
                 </td>
             </tr>

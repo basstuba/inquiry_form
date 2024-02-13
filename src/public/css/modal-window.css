@@ -1,7 +1,14 @@
+.modal {
+    position: relative;
+}
+
 .modal-main {
     width: 100%;
     text-align: center;
     color: #817070;
+    position: absolute;
+    top: -20em;
+    right: 20em;
 }
 
 .modal-main__content {
@@ -32,19 +39,19 @@
     margin: 0 auto;
 }
 
-table {
+.modal-content__table {
     margin: 0 auto;
     width: 100%;
 }
 
-th {
+.modal-content__title {
     width: 35%;
     height: 3em;
     margin-bottom: 3em;
     text-align: left;
 }
 
-td {
+.modal-content-param {
     width: 65%;
     height: 3em;
     margin-bottom: 3em;

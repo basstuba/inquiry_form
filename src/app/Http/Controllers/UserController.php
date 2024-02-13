@@ -46,4 +46,10 @@ class UserController extends Controller
         $categories = Category::all();
         return view('admin', compact('contacts', 'categories'));
     }
+
+    public function destroy(Request $request)
+    {
+        Contact::find($request->id)->delete();
+        return redirect('admin');
+    }
 }

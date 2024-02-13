@@ -11,7 +11,7 @@
     <div class="modal-main">
         <div class="modal-main__content">
             <div class="modal-main__close">
-            <button class="modal-main__close-button">&times;</button><!--保留中-->
+            <button wire:click="closeModal()" type="button" class="modal-main__close-button">&times;</button>
         </div>
         <div class="modal-main__table">
             <table>

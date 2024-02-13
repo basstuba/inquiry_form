@@ -95,11 +95,11 @@
     margin: 0 auto;
 }
 
-tr {
+.search-table__content {
     border: 1px solid #dbcaca;
 }
 
-th {
+.search-table__title {
     border: none;
     background-color: #6b6060;
     color: #fff;
@@ -107,9 +107,9 @@ th {
     height: 3em;
 }
 
-td {
+.search-table__item {
     width: 12em;
-    height: 2em;
+    height: 3em;
 }
 
 .main__action-pagination {
@@ -156,5 +156,85 @@ td {
     background-color: #c3baba;
     color: #6b6060;
     padding: 0.5em 1em;
+}
+
+.modal {
+    position: relative;
+}
+
+.modal-main {
+    width: 100%;
+    text-align: center;
+    color: #817070;
+    position: absolute;
+    top: -20em;
+    right: 37em;
+    z-index: 5;
+}
+
+.admin-modal {
+    border: 1px solid #dbcaca;
+    background-color: #c3baba;
+    color: #6b6060;
+    padding: 0.5em 1.5em;
+}
+.modal-main__content {
+    width: 40em;
+    border: 1px solid #dbcaca;
+    box-shadow: 2px 2px 4px #c7c3c3;
+    margin: 5em auto;
+    background-color: #fff;
+}
+
+.modal-main__close {
+    width: 100%;
+    text-align: right;
+    background-color: #fff;
+}
+
+.modal-main__close-button {
+    background-color: #fff;
+    border: 1px solid #817070;
+    border-radius: 50%;
+    font-size: x-large;
+    color: #817070;
+    margin: 1em;
+    width: 40px;
+    height: 40px;
+}
+
+.modal-main__table {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.modal-content__table {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.modal-content__title {
+    width: 35%;
+    height: 3em;
+    margin-bottom: 3em;
+    text-align: left;
+}
+
+.modal-content-param {
+    width: 65%;
+    height: 3em;
+    margin-bottom: 3em;
+}
+
+.modal-main__delete {
+    margin: 2em;
+}
+
+.delete-form__button-submit {
+    background-color: #d02b2b;
+    border: 1px solid #ba3535;
+    color: #fff;
+    padding: 5px 20px;
 }
 
