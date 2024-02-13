@@ -8,7 +8,7 @@
 5. git add .
 6. git commit -m "メッセージ"
 7. git push origin main
-docker-compose up -d --build
+8. docker-compose up -d --build
 ### laravel環境構築
 1. docker-compose exec php bash
 2. composer install
@@ -33,5 +33,6 @@ docker-compose up -d --build
 ## URL
 ・開発環境: http://localhost/
 ・phpMyAdmin: http://localhost:8080/
-
+### 補足
+エクスポートは未実装です。
 
