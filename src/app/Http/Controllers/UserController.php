@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\Category;
 use App\Models\Contact;
 use App\Models\User;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\ContactsExport;
 
 class UserController extends Controller
 {
@@ -51,5 +53,10 @@ class UserController extends Controller
     {
         Contact::find($request->id)->delete();
         return redirect('admin');
+    }
+
+    public function export()
+    {
+        return Excel::download(new ContactsExport, 'contacts.xlsx');
     }
 }

@@ -53,7 +53,7 @@
     </div>
     <div class="main__action">
         <div class="export">
-            <a class="export-button" href="">エクスポート</a>
+            <a class="export-button" href="{{route('admin.export')}}">エクスポート</a>
         </div>
         <div class="main__action-pagination">
             {{$contacts->links()}}
