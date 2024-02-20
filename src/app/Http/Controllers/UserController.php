@@ -46,19 +46,8 @@ class UserController extends Controller
     {
         $contacts = Contact::with('category')->KeywordSearch($request->keyword)->GenderSearch($request->gender)->CategorySearch($request->category_id)->DateSearch($request->updated_at)->paginate(7);
         $categories = Category::all();
-
-        //if($request->has('export'))
-        //{
-            //return $this->export($request, $contacts);
-        //}
-
         return view('admin', compact('contacts', 'categories'));
     }
-
-    //public function export(Request $request, $contacts)
-    //{
-        //return Excel::download(new ContactsExport($contacts), 'contacts.xlsx');
-    //}
 
     public function destroy(Request $request)
     {
