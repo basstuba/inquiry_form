@@ -15,24 +15,21 @@
 3. cp .env.example .env
 4. 作成された.envファイルの環境変数を変更
 5. php artisan key:generate
-6. php artisan make:model モデル名 -m
-7. 作成されたマイグレーションファイルにてテーブルの作成及びモデルにてカラムの書き換え可不可の設定
-8. php artisan migrate
-9. php artisan make:seeder
-10. 作成されたシーダーファイルを編集しテーブルに登録するデータを作成
-11. DatabaseSeeder.phpに編集したシーダーファイルを登録
-12. php artisan dbseed
+6. php artisan migrate
+7. DatabaseSeeder.phpにcategoriesテーブルのseederファイルとcontactsテーブルのfactoryファイルの登録用コードが記述してあります。現在factoryファイルのコードを"//"で伏せてありますのでfactoryファイルの登録コードを使用する際には"//"を消してseederファイルの先頭に”//”を付けて有効なコードを切り替えてください。
+8. php artisan dbseed
 ## 使用技術
 ・PHP 7.4.9
 ・laravel 8.75
 ・MySQL 8.0.26
 ・nginx 1.21.1
 ・Livewire
+・LaravelExcel
 ## ER図
 ![ER図](./inquiry_form.drawio.png)
 ## URL
 ・開発環境: http://localhost/
 ・phpMyAdmin: http://localhost:8080/
 ### 補足
-エクスポートは未実装です。
+エクスポートは全てのお問い合わせ内容の取得のみ可能です。
 
