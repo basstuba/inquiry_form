@@ -53,7 +53,14 @@
     </div>
     <div class="main__action">
         <div class="export">
-            <a class="export-button" href="{{route('admin.export')}}">エクスポート</a>
+            <form method="post" action="/admin/export">
+                @csrf
+                <input type="hidden" name="keyword" value="{{ request('keyword') }}">
+                <input type="hidden" name="gender" value="{{ request('gender') }}">
+                <input type="hidden" name="category_id" value="{{ request('category_id') }}">
+                <input type="hidden" name="updated_at" value="{{ request('updated_at') }}">
+                <button class="export-button" type="submit">エクスポート</button>
+            </form>
         </div>
         <div class="main__action-pagination">
             {{$contacts->links()}}

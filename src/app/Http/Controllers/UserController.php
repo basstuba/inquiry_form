@@ -55,8 +55,14 @@ class UserController extends Controller
         return redirect('admin');
     }
 
-    public function export()
+    public function export(Request $request)
     {
-        return Excel::download(new ContactsExport, 'contacts.xlsx');
+        $contacts = Contact::with('category')
+        ->KeywordSearch($request->keyword)
+        ->GenderSearch($request->gender)
+        ->CategorySearch($request->category_id)
+        ->DateSearch($request->updated_at)
+        ->get();
+        return Excel::download(new ContactsExport($contacts), 'contacts.xlsx');
     }
 }
