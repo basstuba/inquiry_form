@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="form__group-error">
-            @error('last_name')
+                @error('last_name')
                     {{$message}}
                 @enderror
                 @error('first_name')
@@ -37,9 +37,21 @@
                     <span class="form__group-title--mark">※</span>
                 </div>
                 <div class="form__group-input-gender">
-                    <label><input class="input-gender" type="radio" name="gender" value="1"checked/>男性</label>
-                    <label><input class="input-gender" type="radio" name="gender" value="2"/>女性</label>
-                    <label><input class="input-gender" type="radio" name="gender" value="3"/>その他</label>
+                    <label class="gender-label">
+                        <input class="input-gender" type="radio" name="gender" value="1"
+                    {{ old('gender') == 2 || old('gender') == 3 ? '' : 'checked' }}>
+                        男性
+                    </label>
+                    <label class="gender-label">
+                        <input class="input-gender" type="radio" name="gender" value="2"
+                    {{ old('gender') == 2 ? 'checked' : '' }}>
+                        女性
+                    </label>
+                    <label class="gender-label">
+                        <input class="input-gender" type="radio" name="gender" value="3"
+                    {{ old('gender') == 3 ? 'checked' : '' }}>
+                        その他
+                    </label>
                 </div>
             </div>
             <div class="form__group-error">
@@ -70,25 +82,19 @@
                 </div>
                 <div class="form__group-input-tel">
                     <input class="form__group-input-tell" type="tel" name="tell_1" placeholder="080" value="{{old('tell_1')}}"/>
-                    <p>&minus;</p>
+                    <p class="tel-line">&minus;</p>
                     <input class="form__group-input-tell" type="tel" name="tell_2" placeholder="1234" value="{{old('tell_2')}}"/>
-                    <p>&minus;</p>
+                    <p class="tel-line">&minus;</p>
                     <input class="form__group-input-tell" type="tel" name="tell_3" placeholder="5678" value="{{old('tell_3')}}"/>
                 </div>
             </div>
             <div class="form__group-error">
-                @php
-                    $errorMessages = [
-                        $errors->first('tell_1'),
-                        $errors->first('tell_2'),
-                        $errors->first('tell_3')
-                    ];
-                    $errorMessages = array_filter($errorMessages);
-                    $uniqueErrorMessages = array_unique($errorMessages);
-                    $errorMessage = implode(' ', $uniqueErrorMessages);
-                @endphp
-                @if ($errorMessage)
-                    {{$errorMessage}}
+                @if ($errors->has('tell_1'))
+                    {{$errors->first('tell_1')}}
+                @elseif ($errors->has('tell_2'))
+                    {{$errors->first('tell_2')}}
+                @else
+                    {{$errors->first('tell_3')}}
                 @endif
                 &emsp;
             </div>
@@ -124,7 +130,10 @@
                     <select class="form__group-input-kinds" name="category_id">
                         <option value="">選択してください</option>
                         @foreach($categories as $category)
-                        <option value="{{ $category['id'] }}">{{ $category['content'] }}</option>
+                        <option value="{{ $category['id'] }}"
+                        {{ old('category_id') == $category['id'] ? 'selected' : '' }}>
+                            {{ $category['content'] }}
+                        </option>
                         @endforeach
                     </select>
                 </div>
@@ -141,7 +150,8 @@
                     <span class="form__group-title--mark">※</span>
                 </div>
                 <div class="form__group-input">
-                    <textarea class="form__group-input-text" name="datail" cols="45" rows="5" placeholder="お問い合わせ内容をご記載ください" value="{{old('datail')}}" wrap="hard"></textarea>
+                    <textarea class="form__group-input-text" name="datail" cols="45" rows="5"
+                    placeholder="{{ old('datail') ? '' : 'お問い合わせ内容をご記載ください' }}">{{ old('datail') }}</textarea>
                 </div>
             </div>
             <div class="form__group-error">

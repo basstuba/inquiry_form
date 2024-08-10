@@ -19,12 +19,22 @@
 }
 
 .form__group {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
 .form__group-title {
+    width: 30%;
+    text-align: left;
     font-size: larger;
+}
+
+.form__group-input,
+.form__group-input-gender,
+.form__group-input-tel {
+    width: 70%;
+    text-align: left;
 }
 
 .form__group-title--mark {
@@ -32,20 +42,16 @@
 }
 
 .form__group-input-name {
-    width: 17em;
     height: 2em;
-    margin-left: 2em;
+    margin-right: 2em;
     border: none;
+    border-radius: 0.3rem;
     background-color: #e8e7e7;
     padding: 0 2em;
 }
 
-.form__group-input-gender {
-    margin-right: 12em;
-}
-
-label {
-    margin: 0 1.7em;
+.gender-label {
+    margin-right: 2rem;
     font-weight: bold;
 }
 
@@ -56,16 +62,17 @@ label {
 .form__group-input-email,
 .form__group-input-address,
 .form__group-input-building {
-    width: 36em;
+    width: 90%;
     height: 2em;
     border: none;
+    border-radius: 0.3rem;
     background-color: #e8e7e7;
     padding: 0 2em;
 }
 
 .form__group-input-tel {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -73,11 +80,12 @@ label {
     width: 10em;
     height: 2em;
     border: none;
+    border-radius: 0.3rem;
     background-color: #e8e7e7;
     text-align: center;
 }
 
-p {
+.tel-line {
     margin: 0.5em 0.7em;
 }
 
@@ -88,24 +96,36 @@ p {
 }
 
 .form__group-input-kinds {
-    width: 17em;
     height: 2em;
     border: none;
+    border-radius: 0.3rem;
     background-color: #e8e7e7;
     padding: 0 2em;
     color: #817070;
-    margin-right: 19em;
 }
 
 .form__group-input-text {
+    width: 90%;
     border: none;
+    border-radius: 0.3rem;
     background-color: #e8e7e7;
     padding: 0.5em 2em 0;
-    margin-right: 6em;
 }
+
+.form__group-input-name:focus-visible,
+.form__group-input-email:focus-visible,
+.form__group-input-tell:focus-visible,
+.form__group-input-address:focus-visible,
+.form__group-input-building:focus-visible,
+.form__group-input-kinds:focus-visible,
+.form__group-input-text:focus-visible {
+    outline: 0;
+}
+
 
 .form__button-submit {
     border: 1px solid #dbcaca;
+    border-radius: 0.3rem;
     background-color: #6b6060;
     color: #fff;
     padding: 5px 30px;
