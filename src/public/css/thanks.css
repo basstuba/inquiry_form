@@ -32,6 +32,7 @@
 
 .main__content-button-link {
     border: 1px solid #dbcaca;
+    border-radius: 0.3rem;
     background-color: #6b6060;
     color: #fff;
     padding: 10px 30px;

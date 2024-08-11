@@ -18,8 +18,7 @@ class Inquiry_formController extends Controller
 
     public function confirm(ContactRequest $request)
     {
-        $contact = $request->only('last_name', 'first_name', 'gender', 'email', 'address', 'building', 'category_id', 'datail');
-        $contact['tell'] = $request->tell_1 . $request->tell_2 . $request->tell_3;
+        $contact = $request->all();
 
         $category = Category::find($contact['category_id']);
 
@@ -28,10 +27,16 @@ class Inquiry_formController extends Controller
 
     public function store(Request $request)
     {
-        $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tell', 'address', 'building', 'category_id', 'datail']);
+        if($request->has('back')) {
 
-        Contact::create($contact);
+            return redirect('/')->withInput();
+        }else{
+            $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'address', 'building', 'category_id', 'datail']);
+            $contact['tell'] = $request->tell_1 . $request->tell_2 . $request->tell_3;
 
-        return view('thanks');
+            Contact::create($contact);
+
+            return view('thanks');
+        }
     }
 }

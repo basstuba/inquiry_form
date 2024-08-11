@@ -6,7 +6,7 @@
 
 @section('link')
 <nav class="header__item">
-    <a class="header__item-register" href="/register">register</a>
+    <a class="header__item-register" href="{{ route('register') }}">register</a>
 </nav>
 @endsection
 
@@ -22,7 +22,7 @@
                 <ul class="form__item">
                     <li class="form__item-title">メールアドレス</li>
                     <li class="form__item-input">
-                        <input type="email" name="email" placeholder="例:test@example.com" value="{{old('email')}}"/>
+                        <input class="input" type="email" name="email" placeholder="例:test@example.com" value="{{old('email')}}"/>
                     </li>
                     <li class="form__item-error">
                     @error('email')
@@ -36,7 +36,7 @@
                 <ul class="form__item">
                     <li class="form__item-title">パスワード</li>
                     <li class="form__item-input">
-                        <input type="password" name="password" placeholder="例:coachtech1106"/>
+                        <input class="input" type="password" name="password" placeholder="例:coachtech1106"/>
                     </li>
                     <li class="form__item-error">
                     @error('password')

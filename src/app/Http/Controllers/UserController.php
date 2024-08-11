@@ -14,11 +14,6 @@ use App\Exports\ContactsExport;
 
 class UserController extends Controller
 {
-    public function register()
-    {
-        return view('auth.register');
-    }
-
     public function store(UserRequest $request)
     {
         $hashedPassword = Hash::make($request->input('password'));
@@ -27,11 +22,7 @@ class UserController extends Controller
         $user->email = $request->input('email');
         $user->password = $hashedPassword;
         $user->save();
-        return view('auth.login');
-    }
 
-    public function login()
-    {
         return view('auth.login');
     }
 
@@ -39,13 +30,21 @@ class UserController extends Controller
     {
         $contacts = Contact::paginate(7);
         $categories = Category::all();
+
         return view('admin', compact('contacts', 'categories'));
     }
 
     public function search(Request $request)
     {
-        $contacts = Contact::with('category')->KeywordSearch($request->keyword)->GenderSearch($request->gender)->CategorySearch($request->category_id)->DateSearch($request->updated_at)->paginate(7);
+        $contacts = Contact::with('category')
+        ->KeywordSearch($request->keyword)
+        ->GenderSearch($request->gender)
+        ->CategorySearch($request->category_id)
+        ->DateSearch($request->updated_at)
+        ->paginate(7);
+
         $categories = Category::all();
+
         return view('admin', compact('contacts', 'categories'));
     }
 
@@ -64,6 +63,7 @@ class UserController extends Controller
         ->CategorySearch($request->category_id)
         ->DateSearch($request->updated_at)
         ->get();
+
         return Excel::download(new ContactsExport($contacts), 'contacts.xlsx');
     }
 }

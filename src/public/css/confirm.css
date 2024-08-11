@@ -18,12 +18,12 @@
     margin: 0 auto;
 }
 
-table {
+.form-item__table {
     margin: 0 auto;
     width: 70%;
 }
 
-th {
+.form-item__th {
     background-color: #ab9b94;
     color: #fff;
     border: 1px solid #dbcaca;
@@ -32,19 +32,24 @@ th {
     text-align: left;
 }
 
-td {
+.form-item__td {
     border: 1px solid #dbcaca;
     width: 70%;
 }
 
-input {
+.input-last_name {
     border: none;
     color: #ab9b94;
     font-size: large;
+    text-align: right;
+    padding-right: 1em;
 }
 
-.input-last_name {
-    text-align: right;
+.input-first_name {
+    border: none;
+    color: #ab9b94;
+    font-size: large;
+    text-align: left;
     padding-right: 1em;
 }
 
@@ -54,10 +59,9 @@ input {
 .input-datail {
     width: 24em;
     text-align: center;
-}
-
-.input-tel {
-    text-align: center;
+    border: none;
+    color: #ab9b94;
+    font-size: large;
 }
 
 .form__action {
@@ -68,13 +72,21 @@ input {
 }
 
 .form__action-button--submit {
-    border: 1px solid #dbcaca;
+    border: 0.1rem solid #dbcaca;
+    border-radius: 0.3rem;
     background-color: #6b6060;
     color: #fff;
+    font-size: large;
     padding: 5px 30px;
     margin: 1em 4em;
 }
 
-.form__action-correction--link {
-    color: #817070
+.form__action-correction--back {
+    color: #817070;
+    border: none;
+    border-bottom: 0.1rem solid #817070;
+    background-color: #fff;
+    font-size: large;
+    padding: 0;
+
 }

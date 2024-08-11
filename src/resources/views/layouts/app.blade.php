@@ -9,7 +9,7 @@
     @yield('css')
     @livewireStyles
 </head>
-<body>
+<body class="content-body">
     <header>
         <div class="header">
             <div class="header__title">

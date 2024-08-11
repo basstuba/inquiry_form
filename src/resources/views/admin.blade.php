@@ -22,7 +22,8 @@
         <form class="search-form" action="/admin/search" method="get">
             @csrf
             <div class="search-form__input">
-                <input class="search-form__input-text" type="text" name="keyword" placeholder="名前やメールアドレスを入力してください" value="{{old('keyword')}}">
+                <input class="search-form__input-text" type="text" name="keyword"
+                placeholder="名前やメールアドレスを入力してください" value="{{old('keyword')}}">
             </div>
             <div class="search-form__select">
                 <select class="search-form__select-gender" name="gender">
@@ -63,11 +64,11 @@
             </form>
         </div>
         <div class="main__action-pagination">
-            {{$contacts->links()}}
+            {{ $contacts->appends(request()->query())->links() }}
         </div>
     </div>
     <div class="search-table">
-        <table search-table__main>
+        <table class="search-table__main">
             <tr class="search-table__content">
                 <th class="search-table__title">お名前</th>
                 <th class="search-table__title">性別</th>
@@ -85,7 +86,7 @@
                         {{'男性'}}
                     @elseif($contact['gender'] == '2')
                         {{'女性'}}
-                    @else($contact['gender'] == '3')
+                    @else
                         {{'その他'}}
                     @endif
                 </td>

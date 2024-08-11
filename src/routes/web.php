@@ -15,13 +15,22 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/register', [UserController::class, 'register']);
+Route::get('/register', function() {
+    return view('auth.register');
+})->name('register');
+
 Route::post('/register', [UserController::class, 'store']);
-Route::get('/login', [UserController::class, 'login']);
-Route::get('/admin', [UserController::class, 'admin']);
-Route::get('/admin/search', [UserController::class, 'search']);
-Route::delete('/delete', [UserController::class, 'destroy']);
-Route::post('/admin/export', [UserController::class, 'export'])->name('admin.export');
+
+Route::get('/login', function() {
+    return view('auth.login');
+})->name('login');
+
+Route::middleware('auth')->group(function() {
+    Route::get('/admin', [UserController::class, 'admin']);
+    Route::get('/admin/search', [UserController::class, 'search']);
+    Route::delete('/delete', [UserController::class, 'destroy']);
+    Route::post('/admin/export', [UserController::class, 'export'])->name('admin.export');
+});
 
 Route::get('/', [Inquiry_formController::class, 'index']);
 Route::post('/confirm', [Inquiry_formController::class, 'confirm']);
