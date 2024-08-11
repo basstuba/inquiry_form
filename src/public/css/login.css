@@ -64,6 +64,10 @@
     height: 3em;
 }
 
+.input:focus-visible {
+    outline: 0;
+}
+
 .form__item-error {
     color: red;
     text-align: left;
